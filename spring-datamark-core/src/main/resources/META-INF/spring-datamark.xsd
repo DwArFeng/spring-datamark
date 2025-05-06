@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema
+        xmlns="http://dwarfeng.com/schema/spring-datamark"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:tool="http://www.springframework.org/schema/tool"
+        targetNamespace="http://dwarfeng.com/schema/spring-datamark"
+        elementFormDefault="qualified"
+>
+
+    <xsd:import
+            namespace="http://www.springframework.org/schema/tool"
+            schemaLocation="https://www.springframework.org/schema/tool/spring-tool.xsd"
+    />
+
+    <xsd:annotation>
+        <xsd:documentation><![CDATA[DwArFeng spring-datamark 项目的命名空间支持。]]></xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="config">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[通过该元素配置项目的连接属性以及连接服务。]]></xsd:documentation>
+            <xsd:appinfo>
+                <tool:annotation>
+                    <tool:exports type="com.dwarfeng.springdatamark.stack.bean.DatamarkConfig"/>
+                    <tool:exports type="com.dwarfeng.springdatamark.stack.service.DatamarkService"/>
+                </tool:annotation>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element name="resource-setting" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation><![CDATA[资源设置。]]></xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:attribute name="url" type="xsd:string" default="classpath:datamark/storage">
+                            <xsd:annotation>
+                                <xsd:documentation>
+                                    <![CDATA[资源的地址，可以为 Spring 支持的任何资源。
+                                    如果对应的资源是只读的，调用 DatamarkService.update() 方法将会抛出异常。]]>
+                                </xsd:documentation>
+                                <xsd:appinfo>
+                                    <tool:annotation>
+                                        <tool:expected-type type="java.lang.String"/>
+                                    </tool:annotation>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:attribute>
+                        <xsd:attribute name="charset" type="xsd:string" default="UTF-8">
+                            <xsd:annotation>
+                                <xsd:documentation>
+                                    <![CDATA[资源字符集，默认是 UTF-8，对于中文 windows 系统，
+                                    可能需要把该值改成 GBK。]]>
+                                </xsd:documentation>
+                                <xsd:appinfo>
+                                    <tool:annotation>
+                                        <tool:expected-type type="java.lang.String"/>
+                                    </tool:annotation>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="service-setting" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation><![CDATA[资源设置。]]></xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:attribute name="update-allowed" type="xsd:string" default="true">
+                            <xsd:annotation>
+                                <xsd:documentation>
+                                    <![CDATA[是否允许数据标识服务执行更新方法。
+                                    如果该值为 false，调用 DatamarkService.update() 方法将会抛出异常。]]>
+                                </xsd:documentation>
+                                <xsd:appinfo>
+                                    <tool:annotation>
+                                        <tool:expected-type type="java.lang.Boolean"/>
+                                    </tool:annotation>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:all>
+            <xsd:attribute name="config-id" type="xsd:token" default="datamarkConfig">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <![CDATA[配置的 bean id，默认是 datamarkConfig。]]>
+                    </xsd:documentation>
+                    <xsd:appinfo>
+                        <tool:annotation>
+                            <tool:expected-type type="java.lang.String"/>
+                        </tool:annotation>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="service-id" type="xsd:token" default="datamarkService">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        <![CDATA[数据标识服务的 bean id，默认是 datamarkService。]]>
+                    </xsd:documentation>
+                    <xsd:appinfo>
+                        <tool:annotation>
+                            <tool:expected-type type="java.lang.String"/>
+                        </tool:annotation>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

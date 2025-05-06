@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:datamark="http://dwarfeng.com/schema/spring-datamark"
+        xmlns="http://www.springframework.org/schema/beans"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://dwarfeng.com/schema/spring-datamark
+        http://dwarfeng.com/schema/spring-datamark/spring-datamark.xsd"
+>
+
+    <datamark:config>
+        <datamark:resource-setting url="${datamark.resource.url}" charset="${datamark.resource.charset}"/>
+        <datamark:service-setting update-allowed="${datamark.service.update_allowed}"/>
+    </datamark:config>
+</beans>
