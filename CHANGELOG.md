@@ -4,7 +4,8 @@
 
 #### 功能构建
 
-- (无)
+- 优化部分类中的文档注释。
+  - com.dwarfeng.springdatamark.api.integration.jpa.DatamarkField。
 
 #### Bug修复
 

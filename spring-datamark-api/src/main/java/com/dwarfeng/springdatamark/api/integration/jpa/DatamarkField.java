@@ -23,7 +23,6 @@ import java.lang.annotation.*;
  *     {@literal @}Column(
  *             name = "created_datamark",
  *             length = Constraints.LENGTH_DATAMARK,
- *             nullable = false,
  *             updatable = false
  *     )
  *     private String createdDatamark;
@@ -31,8 +30,7 @@ import java.lang.annotation.*;
  *     {@literal @}DatamarkField
  *     {@literal @}Column(
  *             name = "modified_datamark",
- *             length = Constraints.LENGTH_DATAMARK,
- *             nullable = false
+ *             length = Constraints.LENGTH_DATAMARK
  *     )
  *     private String modifiedDatamark;
  *
