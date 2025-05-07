@@ -10,7 +10,7 @@
 
     <groupId>com.dwarfeng</groupId>
     <artifactId>spring-datamark</artifactId>
-    <version>1.0.0.a</version>
+    <version>1.0.1.a-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -154,7 +154,7 @@
             <dependency>
                 <groupId>com.dwarfeng</groupId>
                 <artifactId>spring-datamark-core</artifactId>
-                <version>1.0.0.a</version>
+                <version>1.0.1.a-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
