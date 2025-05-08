@@ -11,8 +11,16 @@
 
 ## 版本黑名单
 
-（暂无）
+| 版本号     | 原因                   |
+|---------|----------------------|
+| 1.1.0.a | JPA 集成模块中的实体侦听器完全不可用 |
 
 ## 详细原因
 
-（暂无）
+### 1.1.0.a
+
+详细版本号: Release_1.1.0_20250508_build_B。
+
+原因： 存在严重 bug，导致下列实体侦听器在任何场景中完全不可用，并抛出异常。
+
+- com.dwarfeng.springdatamark.api.integration.jpa.DatamarkEntityListener。

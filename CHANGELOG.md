@@ -4,7 +4,8 @@
 
 #### 功能构建
 
-- (无)
+- Wiki 更新。
+  - docs/wiki/zh_CN/VersionBlacklist.md。
 
 #### Bug修复
 
