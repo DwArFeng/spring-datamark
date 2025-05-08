@@ -4,6 +4,9 @@
 
 #### 功能构建
 
+- Wiki 编写。
+  - docs/wiki/zh_CN/VersionBlacklist.md。
+
 - 为部分集成模块增加多数据标识服务实例下的处理能力。
   - com.dwarfeng.springdatamark.api.integration.jpa。
   - com.dwarfeng.springdatamark.api.integration.springtelqos。
