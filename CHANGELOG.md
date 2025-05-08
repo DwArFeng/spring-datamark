@@ -8,7 +8,8 @@
 
 #### Bug修复
 
-- (无)
+- 修复 JPA 集成模块实体侦听器的逻辑 bug。
+  - com.dwarfeng.springdatamark.api.integration.jpa.DatamarkEntityListener。
 
 #### 功能移除
 

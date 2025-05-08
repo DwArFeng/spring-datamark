@@ -96,8 +96,8 @@ public class DatamarkEntityListener {
     }
 
     private EntityInfo parseEntityInfo(Object entity) {
-        // 如果 entityFieldInfoMap 为空映射，直接抛出异常。
-        if (entityFieldInfoMap.isEmpty()) {
+        // 如果 datamarkServiceMap 为空映射，直接抛出异常。
+        if (datamarkServiceMap.isEmpty()) {
             throw new IllegalStateException("应用上下文中不存在任何 DatamarkService");
         }
 
