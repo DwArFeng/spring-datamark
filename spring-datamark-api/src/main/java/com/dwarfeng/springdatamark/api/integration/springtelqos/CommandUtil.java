@@ -15,6 +15,13 @@ import java.util.StringJoiner;
 final class CommandUtil {
 
     /**
+     * 最大交互式重试次数。
+     *
+     * @since 1.1.0
+     */
+    public static final int MAX_INTERACTIVE_RETRY_TIMES = 3;
+
+    /**
      * 拼接选项的前缀，用于生成选项说明书。
      *
      * <p>

@@ -1,5 +1,7 @@
 package com.dwarfeng.springdatamark.api.integration.jpa;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.lang.annotation.*;
 
 /**
@@ -45,4 +47,11 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD})
 @Documented
 public @interface DatamarkField {
+
+    /**
+     * TODO 实现功能后补充注释。
+     *
+     * @since 1.1.0
+     */
+    String serviceId() default StringUtils.EMPTY;
 }
