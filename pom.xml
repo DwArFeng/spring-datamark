@@ -28,7 +28,7 @@
         <!-- 集中定义依赖版本号 -->
         <jsr305.version>3.0.2</jsr305.version>
         <annotations.version>3.0.1</annotations.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-beanutils.version>1.11.0</commons-beanutils.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <junit.version>4.13.2</junit.version>
         <spring.version>5.3.39</spring.version>
